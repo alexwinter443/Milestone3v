@@ -1,4 +1,8 @@
 <?php
+// Ahn lee
+// Date: 2/24/2021
+// Prof Hughes
+// this is my own work
 namespace App\Services\Models;
 
 class JobHistoryModel{
@@ -10,6 +14,7 @@ class JobHistoryModel{
     private $skills;
     private $schools;
     private $highestDegree;
+    private $num;
     
     public function __construct()
     {
