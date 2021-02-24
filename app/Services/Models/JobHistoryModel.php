@@ -3,6 +3,7 @@
 // Date: 2/24/2021
 // Prof Hughes
 // this is my own work
+// this is my own work
 namespace App\Services\Models;
 
 class JobHistoryModel{
