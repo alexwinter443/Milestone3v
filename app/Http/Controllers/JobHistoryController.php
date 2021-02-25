@@ -9,7 +9,7 @@ use App\Services\Models\JobHistoryModel;
 
 /*
  * CST-256 Database Application Programming 3
- * Vien Nguyen - Anh Le
+ * Vien Nguyen - Anh Le - Alex Vergara
  * JobHistoryController class
  * Feb 21st 2021
  * This class is working as a controller to route for incomming request from clients
