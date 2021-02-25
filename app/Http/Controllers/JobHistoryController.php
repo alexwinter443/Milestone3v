@@ -61,11 +61,12 @@ class JobHistoryController extends Controller
         
     }
     
+    // read all job listings
     public function readAllJobHistory(){
-        
+        // service job
         $jobHistoryDataSerivce = new JobHistoryService();
         $data = $jobHistoryDataSerivce->read();
-        
+        // array for all job listings
         $JobHistoryModels = Array();
         while ($row = mysqli_fetch_assoc($data)) {
             array_push($JobHistoryModels, $row);
@@ -73,6 +74,7 @@ class JobHistoryController extends Controller
         return view('ReadAllJobs')->with('JobHistoryModels',$JobHistoryModels);
     }
     
+    // displays job fields 
     public function updateJob(Request $request){
         
         //$jobHistoryDataService = new JobHistoryService();
@@ -92,6 +94,7 @@ class JobHistoryController extends Controller
         return view('updateJob')->with('job', $job);
     }
     
+    // Update job
     public function updateJobSave(Request $request){
         
         $jobHistoryDataService = new JobHistoryService();

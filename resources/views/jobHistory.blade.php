@@ -15,9 +15,8 @@
 
 		<form class="form" action="createJobHistory" method="POST" id="jobHistoryForm">
 		<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
-			
+			<!-- Title Video -->
 			<div class="form-group">
-				
 				<div class="col-xs-6">
 					<label for="title">Job Title</label> <input
 						type="text" class="form-control" name="title" id="title"
@@ -25,6 +24,7 @@
 						<?php echo $errors->first('title')?>
 				</div>
 			</div>
+			<!-- Position Field  -->
 			<div class="form-group">
 
 				<div class="col-xs-6">
@@ -34,7 +34,7 @@
 						<?php echo $errors->first('position')?>
 				</div>
 			</div>
-
+			<!--  Date Start field -->
 			<div class="form-group">
 
 				<div class="col-xs-6">
@@ -44,7 +44,7 @@
 						<?php echo $errors->first('dateStart')?>
 				</div>
 			</div>
-
+			<!-- Date End Field -->
 			<div class="form-group">
 				<div class="col-xs-6">
 					<label for="dateEnd">Date End</label> <input type="date"
@@ -53,6 +53,7 @@
 						title="">
 				</div>
 			</div>
+			<!-- Skills Field -->
 			<div class="form-group">
 
 				<div class="col-xs-6">
@@ -62,7 +63,7 @@
 						<?php echo $errors->first('skills')?>
 				</div>
 			</div>
-
+			<!-- Schools field -->
 			<div class="form-group">
 
 				<div class="col-xs-6">
@@ -72,7 +73,7 @@
 						<?php echo $errors->first('schools')?>
 				</div>
 			</div>
-			
+			<!-- Highest Degree field  -->
 			<div class="form-group">
 
 				<div class="col-xs-6">
@@ -81,7 +82,7 @@
 						placeholder="Your highest degree" title="enter your highest degree.">
 						<?php echo $errors->first('highestDegree')?>
 				</div>
-			
+			<!-- buttons -->
 				<div class="form-group">
 					<div class="col-xs-12">
 						<br>

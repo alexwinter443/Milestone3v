@@ -14,15 +14,19 @@ use App\Services\Data\DatabaseConnection;
 class JobHistoryService implements DataAccessInterface
 {
     
+    // reads all jobs
     public function read()
     {
+        // return job DAO method
         $jobHistoryDAO = new JobHistoryDAO();
         return $jobHistoryDAO->readAll();
     }
     
+    // create job portfolio
     public function create($jobHistory)
     {
-        $createNew = new JobHistoryDAO();
+        // return DAO method
+       $createNew = new JobHistoryDAO();
        $isInserted = $createNew->create($jobHistory);
        return $isInserted;
     }
@@ -32,6 +36,7 @@ class JobHistoryService implements DataAccessInterface
         
     }
     
+    // delete method
     public function delete($userId)
     {
         $jobDao = new JobHistoryDAO();
@@ -43,8 +48,11 @@ class JobHistoryService implements DataAccessInterface
     {
         
     }
+    
+    // update job listing
     public function update2($obj)
     {
+        
         $jobHistoryDAO = new JobHistoryDAO();
         $stmt = $jobHistoryDAO->update($obj);
         return $stmt;

@@ -1,3 +1,7 @@
+<!-- Vien  Nguyen-->
+<!-- Date: 2/22/2021  -->
+<!-- Professor hughes -->
+<!-- This is my own work -->
 @extends('layouts/layout') @section('jobHistory')
 <script src="{!!url('/js/jquery.min.js')!!}"></script>
 <h2>Job History</h2>

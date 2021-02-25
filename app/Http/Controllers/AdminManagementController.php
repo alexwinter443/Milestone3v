@@ -13,17 +13,22 @@ use Illuminate\Http\Request;
 class AdminManagementController extends Controller
 {
    
+    // reads all users
     public function readAllUsers(){
         
+        // instantiate business service
         $adminManagement = new AdminBusinessDataService();
         $data = $adminManagement->read();
+        // array of users
         $users = Array();
         while ($row = mysqli_fetch_assoc($data)) {
            array_push($users, $row);
         }
+        // return view with data
         return view('internals/admin')->with('users',$users);
     }
     
+    // 
     public function FindAllJobs(Request $request) {
         $job = "";
         $adminManagement = new AdminBusinessDataService();
@@ -35,6 +40,7 @@ class AdminManagementController extends Controller
         }
         return view('jobs')->with('jobs', $allJobs);
     }
+    
     
     public function ChangeUserStatus(Request $request){
         $userId = $request->input('userId');

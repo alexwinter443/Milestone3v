@@ -11,9 +11,12 @@ class JobHistoryDAO
     public function __construct()
     {}
     
+    // reads all job listings
     public function readAll()
     {
-        $databaseConnection = new DatabaseConnection();;
+        // create DB Object
+        $databaseConnection = new DatabaseConnection();
+        // select all job listings
         $sql_query = "SELECT * FROM job_history";
         //Get connection
         $conn = $databaseConnection->getConnection();
@@ -24,6 +27,7 @@ class JobHistoryDAO
         
     }
     
+    // create job listing
     public function create($jobHistory)
     {
         //Open Database connection
@@ -37,6 +41,7 @@ class JobHistoryDAO
                       ,'".$jobHistory->getSkills()."'
                       ,'".$jobHistory->getSchools()."'
                       ,'".$jobHistory->getHighestDegree()."')";
+        // if sql stmt is executed
         if($db->getConnection()->query($sql)===true){
             return true;
         }else{
